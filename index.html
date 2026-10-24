@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorhees College - Transport Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <div class="logo">VC</div>
+            <div>
+                <h1>Voorhees College</h1>
+                <p>Transport Information Portal</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#routes">Bus Routes</a></li>
+                <li><a href="#pickups">Pickup Points</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- Home / Dashboard Section -->
+        <section id="home" class="card hero-section">
+            <h2>Welcome to Voorhees College Transport Service</h2>
+            <p>Our transport service ensures safe, comfortable, and punctual daily travel for students and staff across various routes in and around the city.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>12</h3>
+                    <p>Active Routes</p>
+                </div>
+                <div class="stat-card">
+                    <h3>45+</h3>
+                    <p>Pickup Points</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1000+</h3>
+                    <p>Daily Passengers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Safe Travel</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="card search-section">
+            <h2>Find Your Transport Details</h2>
+            <p>Search by Bus Number, Route Name, or Pickup Location:</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="e.g. Bus 01, Katpadi, Silk Mill...">
+                <button id="clearBtn">Clear</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Results / Bus Routes Section -->
+        <section id="routes" class="card">
+            <h2>Bus Routes & Schedule</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bus No</th>
+                            <th>Route Name</th>
+                            <th>Starting Point</th>
+                            <th>Destination</th>
+                            <th>Departure Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="routesTableBody">
+                        <!-- Content populated dynamically via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pickup Points Section -->
+        <section id="pickups" class="card">
+            <h2>Pickup Points Details</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pickup Location</th>
+                            <th>Assigned Bus</th>
+                            <th>Morning Timing</th>
+                            <th>Evening Timing</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pickupsTableBody">
+                        <!-- Content populated dynamically via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Modal for Route Details -->
+    <div id="routeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 id="modalBusTitle">Bus Details</h2>
+            <div id="modalDetailsContent">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Voorhees College, Vellore. Transport Department. All Rights Reserved.</p>
+        <p class="developer-credit">Website created by <strong>K. Rajan</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
